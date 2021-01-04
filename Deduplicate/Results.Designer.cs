@@ -39,6 +39,7 @@ namespace Deduplicate
          this.cboFileTypes = new System.Windows.Forms.ComboBox();
          this.btnGo = new System.Windows.Forms.Button();
          this.label1 = new System.Windows.Forms.Label();
+         this.label2 = new System.Windows.Forms.Label();
          this.contextMenuStrip1.SuspendLayout();
          this.SuspendLayout();
          // 
@@ -105,14 +106,14 @@ namespace Deduplicate
             "Bitmap Files (*.bmp)",
             "INI Files (*.ini)",
             "DB Files (*.db)"});
-         this.cboFileTypes.Location = new System.Drawing.Point(318, 35);
+         this.cboFileTypes.Location = new System.Drawing.Point(12, 65);
          this.cboFileTypes.Name = "cboFileTypes";
          this.cboFileTypes.Size = new System.Drawing.Size(182, 23);
          this.cboFileTypes.TabIndex = 1;
          // 
          // btnGo
          // 
-         this.btnGo.Location = new System.Drawing.Point(506, 35);
+         this.btnGo.Location = new System.Drawing.Point(200, 64);
          this.btnGo.Name = "btnGo";
          this.btnGo.Size = new System.Drawing.Size(58, 23);
          this.btnGo.TabIndex = 2;
@@ -123,17 +124,29 @@ namespace Deduplicate
          // label1
          // 
          this.label1.AutoSize = true;
-         this.label1.Location = new System.Drawing.Point(196, 39);
+         this.label1.Location = new System.Drawing.Point(12, 47);
          this.label1.Name = "label1";
          this.label1.Size = new System.Drawing.Size(118, 15);
          this.label1.TabIndex = 3;
          this.label1.Text = "Exclude Files of Type:";
+         // 
+         // label2
+         // 
+         this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+         this.label2.AutoSize = true;
+         this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+         this.label2.Location = new System.Drawing.Point(626, 76);
+         this.label2.Name = "label2";
+         this.label2.Size = new System.Drawing.Size(157, 15);
+         this.label2.TabIndex = 4;
+         this.label2.Text = "Right click a node for options";
          // 
          // Results
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
+         this.Controls.Add(this.label2);
          this.Controls.Add(this.label1);
          this.Controls.Add(this.btnGo);
          this.Controls.Add(this.cboFileTypes);
@@ -158,5 +171,6 @@ namespace Deduplicate
       private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCOPY;
       private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemEXCLUDE;
       private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDELETE;
+      private System.Windows.Forms.Label label2;
    }
 }

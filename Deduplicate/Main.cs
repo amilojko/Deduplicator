@@ -230,5 +230,55 @@ namespace Deduplicate
          frm.ShowDialog();
          Cursor.Current = Cursors.Default;
       }
+
+      private void toolStripMenuItemEXIT_Click(object sender, EventArgs e)
+      {
+         Application.Exit();
+      }
+
+      private void toolStripMenuItemCLEAREX_Click(object sender, EventArgs e)
+      {
+         DialogResult result = MessageBox.Show("Are you sure you want to clear all previous searches?", PROGRAM_NAME, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+         if (result == DialogResult.Yes)
+         {
+            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+            SQLiteCommand cmd = conn.CreateCommand();
+            SQLiteTransaction transaction = conn.BeginTransaction();
+            //cmd.CommandText = "DELETE FROM Exclusions";
+            cmd.CommandText = "UPDATE FileInfo SET Exclude=0";
+            cmd.ExecuteNonQuery();
+            transaction.Commit();
+            cmd.Dispose();
+            conn.Close();
+         }
+      }
+
+      private void toolStripMenuItemCLEARPREVIOUS_Click(object sender, EventArgs e)
+      {
+         DialogResult result = MessageBox.Show("Are you sure you want to clear all previous searches?", PROGRAM_NAME, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+         if (result == DialogResult.Yes)
+         {            
+            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+            SQLiteTransaction transaction = conn.BeginTransaction();
+            SQLiteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "DELETE FROM FileInfo";
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = "DELETE FROM Sessions";
+            cmd.ExecuteNonQuery();
+            transaction.Commit();
+            conn.Close();
+            cmd.Dispose();
+            cboResult.DataSource = null;
+            StatusUpdate("Cleared All Previous Results");
+         }
+      }
+
+      private void toolStripMenuItemNEW_Click(object sender, EventArgs e)
+      {
+         txtDescription.Text = "";
+         txtLocation.Text = "";
+      }
    }
 }

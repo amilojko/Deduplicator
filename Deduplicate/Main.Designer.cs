@@ -110,24 +110,28 @@ namespace Deduplicate
          this.toolStripMenuItemNEW.Name = "toolStripMenuItemNEW";
          this.toolStripMenuItemNEW.Size = new System.Drawing.Size(189, 22);
          this.toolStripMenuItemNEW.Text = "&New";
+         this.toolStripMenuItemNEW.Click += new System.EventHandler(this.toolStripMenuItemNEW_Click);
          // 
          // toolStripMenuItemCLEARPREVIOUS
          // 
          this.toolStripMenuItemCLEARPREVIOUS.Name = "toolStripMenuItemCLEARPREVIOUS";
          this.toolStripMenuItemCLEARPREVIOUS.Size = new System.Drawing.Size(189, 22);
          this.toolStripMenuItemCLEARPREVIOUS.Text = "Clear Previous Results";
+         this.toolStripMenuItemCLEARPREVIOUS.Click += new System.EventHandler(this.toolStripMenuItemCLEARPREVIOUS_Click);
          // 
          // toolStripMenuItemCLEAREX
          // 
          this.toolStripMenuItemCLEAREX.Name = "toolStripMenuItemCLEAREX";
          this.toolStripMenuItemCLEAREX.Size = new System.Drawing.Size(189, 22);
          this.toolStripMenuItemCLEAREX.Text = "Clear Exclusions";
+         this.toolStripMenuItemCLEAREX.Click += new System.EventHandler(this.toolStripMenuItemCLEAREX_Click);
          // 
          // toolStripMenuItemEXIT
          // 
          this.toolStripMenuItemEXIT.Name = "toolStripMenuItemEXIT";
          this.toolStripMenuItemEXIT.Size = new System.Drawing.Size(189, 22);
          this.toolStripMenuItemEXIT.Text = "E&xit";
+         this.toolStripMenuItemEXIT.Click += new System.EventHandler(this.toolStripMenuItemEXIT_Click);
          // 
          // groupBox1
          // 
@@ -159,7 +163,7 @@ namespace Deduplicate
          this.groupBox2.Size = new System.Drawing.Size(363, 141);
          this.groupBox2.TabIndex = 8;
          this.groupBox2.TabStop = false;
-         this.groupBox2.Text = "2. Enter Description and create the list";
+         this.groupBox2.Text = "2. Enter Description and click Go to create the list";
          // 
          // txtDescription
          // 
