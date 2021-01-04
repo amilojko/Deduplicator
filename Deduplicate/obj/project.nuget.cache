@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KtmVQl3LVx20/8+J5QRekHnofBoSByqSdH6pESJVXG4M/O20JdfSsnEFKrmr36e/TTmCtP/DpOmloMY6G+DKww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amilojkovic\\Desktop\\Dedup\\Deduplicate\\Deduplicate.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amilojkovic\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.113.2\\stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
+    "C:\\Users\\amilojkovic\\.nuget\\packages\\system.data.sqlite.core\\1.0.113.7\\system.data.sqlite.core.1.0.113.7.nupkg.sha512"
+  ],
+  "logs": []
+}
